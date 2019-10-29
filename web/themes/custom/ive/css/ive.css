@@ -42,6 +42,17 @@ h2 {
     background: #999999;
 }
 
+.node .teaser-image {
+    /*flex: 1;*/
+    width: 50%;
+    float: left;
+}
+.node .teaser-content{
+    /*flex: 2;*/
+    width: 50%;
+    float: left;
+}
+
 /* CORRECTION*/
 .site-branding__name {
     font-size: 2rem;

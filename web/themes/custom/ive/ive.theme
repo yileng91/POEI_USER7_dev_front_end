@@ -83,6 +83,12 @@ function ive_preprocess_node(&$variables) {
   if ($variables['teaser'] || !empty($variables['content']['comments']['comment_form'])) {
     unset($variables['content']['links']['comment']['#links']['comment-add']);
   }
+
+  //ksm($variables['date']);
+  //ksm($variables['node']->getCreatedTime());
+  //$variables['date'] = date('l j F Y H\hi A');
+  //$variables['date'] = format_date( $variables['node']->getCreatedTime(), 'format_date_custom_france');
+  $variables['date'] = \Drupal::service('date.formatter')->format( $variables['node']->getCreatedTime(), 'format_date_custom_france');
 }
 
 /**
@@ -93,6 +99,9 @@ function ive_preprocess_block(&$variables) {
   if ($variables['plugin_id'] == 'system_branding_block') {
     $variables['attributes']['class'][] = 'clearfix';
   }
+
+  //echo base_path().$variables['directory'];
+  $variables['directory'] = base_path().$variables['directory'];
 }
 
 /**
@@ -121,5 +130,42 @@ function ive_form_alter(&$form, FormStateInterface $form_state, $form_id) {
       $form[$key]['submit']['#attributes'] = new Attribute();
     }
     $form[$key]['submit']['#attributes']->addClass('search-form__submit');
+  }
+}
+
+/**
+* Implements hook_theme_suggestions_hook_alter()
+*/
+/*
+function ive_theme_suggestions_page_alter(array &$suggestions, array $variables){
+    //ksm($suggestions);
+    // génère des suggestions de template par noeud
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if($node){
+        //ksm($node);
+        //ksm($node->bundle());
+        $suggestions[] = 'page__type__'.$node->bundle();
+        $suggestions[] = 'page__node__'.$node->id();
+    }
+}
+*/
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ * Add suggestion template for page.html.twig
+ */
+function ive_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  // Add template suggestion based on node type
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $content_type = $node->bundle();
+    $suggestions[] = 'page__type__'.$content_type;
+    $suggestions[] = 'page__node__' . $node->id();
+    //kint($suggestions);
+  }
+  if ($term = \Drupal::routeMatch()->getParameter('taxonomy_term')) {
+    $vocabulary = $term->bundle();
+    $suggestions[] = 'page__vocabulary__'.$vocabulary;
+    $suggestions[] = 'page__taxonomy__term__' . $term->id();
+    //kint($suggestions);
   }
 }

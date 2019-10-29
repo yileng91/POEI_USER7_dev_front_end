@@ -40,6 +40,8 @@
   {{ title_prefix }}
   {% if label %}
     <h2{{ title_attributes }}>{{ label }}</h2>
+      {# varaible de h1 h2 h3 ... #}
+    {#{{ hn }}{{ title_attributes }}>{{ label }}{{ hn }}#}
   {% endif %}
   {{ title_suffix }}
   {% block content %}

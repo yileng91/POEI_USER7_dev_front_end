@@ -37,14 +37,19 @@
   ]
 %}
 {#Si il y a un Vhosts#}
+{#
+{% set impgpath = '/' ~ directory ~ '/images/drupal8.png' %}
+#}
+
 {%
-    set impgpath = '/' ~ directory ~ '/images/drupal8.png'
+    set impgpath =  directory ~ '/images/drupal8.png'
 %}
+
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
 
-  <img src="http://user7.d8.lab/drupal_user7/dev_front_end/web/themes/custom/ive/images/drupal8.png" />
-  {#<img src="{{ imgpath }}" />#}
+ {# <img src="http://user7.d8.lab/drupal_user7/dev_front_end/web/themes/custom/ive/images/drupal8.png" />#}
+  <img src="{{ impgpath }}" />
   {#{% if label %}
     <h2{{ title_attributes }}>{{ kint(label) }} {{ kint(directory) }}<img src="http://user7.d8.lab/drupal_user7/dev_front_end/web/themes/custom/ive/images/drupal8.png" /></h2>
 
