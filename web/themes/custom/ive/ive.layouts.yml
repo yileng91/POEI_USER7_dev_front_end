@@ -1,0 +1,21 @@
+layout_fourcol:
+  label: 'four column'
+  path: layout/fourcol
+  template: layout--fourcol
+  library: layout_discovery/twocol
+  category: 'Columns: 4'
+  default_region: first
+  icon: images/four-square.png
+  regions:
+    top:
+      label: Top
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+    fourth:
+      label: Fourth
+    bottom:
+      label: Bottom

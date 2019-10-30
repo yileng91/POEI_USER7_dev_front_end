@@ -1,0 +1,41 @@
+{% set classes=['layout','layout--fourcol'] %}
+
+{% if content %}
+    <div {{ attibutes.addClass(classes) }}>
+        {% if content.top %}
+        <div class="layout__region layout__region--top">
+            {{ content.top }}
+        </div>rst
+        {% endif %}
+
+        {% if content.first %}
+            <div class="layout__region layout__region--first">
+                {{ content.first }}
+            </div>
+        {% endif %}
+
+        {% if content.second %}
+            <div class="layout__region layout__region--second">
+                {{ content.second }}
+            </div>
+        {% endif %}
+
+        {% if content.third %}
+            <div class="layout__region layout__region--third">
+                {{ content.third }}
+            </div>
+        {% endif %}
+
+        {% if content.fourth %}
+            <div class="layout__region layout__region--fourth">
+                {{ content.fourth }}
+            </div>
+        {% endif %}
+
+        {% if content.bottom %}
+            <div class="layout__region layout__region--bottom">
+                {{ content.bottom }}
+            </div>
+        {% endif %}
+    </div>
+{% endif %}
