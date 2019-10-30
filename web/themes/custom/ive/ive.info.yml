@@ -22,8 +22,15 @@ libraries:
   - ive/global-styling
   - ive/ive
 libraries-extend:
+  # étendre une lirairie existante
   toolbar/toolbar:
     - ive/toolbar
+libraries-override:
+  # surcharger librairie existante
+  classy/messages:
+    css:
+      component:
+        css/components/messages.css: css/components/messages2.css
 ckeditor_stylesheets:
   - css/base/elements.css
   - css/components/captions.css

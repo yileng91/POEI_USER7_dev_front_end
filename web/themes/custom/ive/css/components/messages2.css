@@ -1,0 +1,7 @@
+.messages--status {
+    color: #325e1c;
+    border-color: #c9e1bd #c9e1bd #c9e1bd transparent;
+    background-color: #ffee77;
+    background-image: url(../../../../misc/icons/73b355/check.svg);
+    box-shadow: -8px 0 0 #77b259;
+}
