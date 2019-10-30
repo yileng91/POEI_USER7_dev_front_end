@@ -66,6 +66,8 @@ color.preview:
   css:
     theme:
       color/preview.css: {}
+      https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap: {type: external}
+      css/ive.css: {}
   js:
     color/preview.js: {}
   dependencies:

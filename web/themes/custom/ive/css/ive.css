@@ -37,6 +37,9 @@ h2 {
 .field--name-title{
     color: orange;
 }*/
+html body {
+    font-family: 'Liu Jian Mao Cao', cursive;
+}
 
 .bottom-wide {
     background: #999999;
