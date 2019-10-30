@@ -88,3 +88,8 @@ ive:
       //fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap: {type: external}
       css/ive.css: {}
       css/wysiwyg.css: {}
+
+toolbar:
+  css:
+    theme:
+      css/toolbar.css: {}

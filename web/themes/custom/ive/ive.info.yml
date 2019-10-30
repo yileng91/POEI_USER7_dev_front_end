@@ -21,6 +21,9 @@ core: 8.x
 libraries:
   - ive/global-styling
   - ive/ive
+libraries-extend:
+  toolbar/toolbar:
+    - ive/toolbar
 ckeditor_stylesheets:
   - css/base/elements.css
   - css/components/captions.css
