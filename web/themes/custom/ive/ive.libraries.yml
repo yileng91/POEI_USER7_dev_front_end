@@ -88,6 +88,12 @@ ive:
       //fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap: {type: external}
       css/ive.css: {}
       css/wysiwyg.css: {}
+  js:
+    js/ive.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
 
 toolbar:
   css:
@@ -98,3 +104,4 @@ fourcol:
   css:
     theme:
       layouts/layouts.css: {}
+

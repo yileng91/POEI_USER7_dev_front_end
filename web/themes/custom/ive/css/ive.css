@@ -37,6 +37,14 @@ h2 {
 .field--name-title{
     color: orange;
 }*/
+
+.node .external-link::before {
+    content:url(../images/external-link.gif);
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+}
+
 html body {
     font-family: 'Liu Jian Mao Cao', cursive;
 }
