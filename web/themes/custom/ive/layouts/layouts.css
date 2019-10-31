@@ -1,0 +1,35 @@
+.layout--fourcol{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.layout--fourcol > .layout__region {
+    flex: 0 1 100%;
+    /*margin: 2px;
+    width: 48%;*/
+}
+
+@media screen and (min-width: 40em){
+    .layout--fourcol > .layout__region--first,
+    .layout--fourcol > .layout__region--second,
+    .layout--fourcol > .layout__region--third,
+    .layout--fourcol > .layout__region--fourth {
+        flex: 0 1 50%;
+    }
+}
+
+.layout__region--first {
+    background-color: red;
+}
+
+.layout__region--second {
+    background-color: blue;
+}
+
+.layout__region--third {
+    background-color: green;
+}
+
+.layout__region--fourth {
+    background-color: grey;
+}

@@ -1,14 +1,12 @@
 layout_fourcol:
   label: 'four column'
-  path: layout/fourcol
+  path: layouts/fourcol
   template: layout--fourcol
-  library: layout_discovery/twocol
-  category: 'Columns: 4'
+  library: ive/fourcol
+  category: 'Ive'
   default_region: first
-  icon: images/four-square.png
+  icon: four-square.png
   regions:
-    top:
-      label: Top
     first:
       label: First
     second:
@@ -17,5 +15,3 @@ layout_fourcol:
       label: Third
     fourth:
       label: Fourth
-    bottom:
-      label: Bottom

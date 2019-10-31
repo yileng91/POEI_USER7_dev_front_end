@@ -93,3 +93,8 @@ toolbar:
   css:
     theme:
       css/toolbar.css: {}
+
+fourcol:
+  css:
+    theme:
+      layouts/layouts.css: {}
