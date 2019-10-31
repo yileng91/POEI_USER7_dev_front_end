@@ -26,7 +26,7 @@
 
     // Tous les blocs peuvent être repliés/dépliés
     // lorsque l’on clique sur leur titre.
-    Drupal.behaviors.collapsableBlock = {
+    Drupal.behaviors.iveCollapsableBlock = {
         attach: function (context, settings) {
             $('.sidebar .block h2', context).click(function() {
                 // Visual debugging ;-)

@@ -105,3 +105,11 @@ fourcol:
     theme:
       layouts/layouts.css: {}
 
+tabs:
+  version: VERSION
+  js:
+    js/jtabs.js: {}
+  dependencies:
+    - core/jquery.ui.tabs
+    - core/drupal
+    - core/drupalSettings

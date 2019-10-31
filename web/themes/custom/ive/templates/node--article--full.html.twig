@@ -79,6 +79,8 @@
   ]
 %}
 {{ attach_library('classy/node') }}
+{{ attach_library('ive/tabs') }}
+
 <article{{ attributes.addClass(classes) }}>
 
     {#
@@ -106,7 +108,26 @@
 
 
   <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-    {{ content }}
+    {#{{ content }}#}
+    {# {{ kint(content) }}#}
+
+    <div id="tabs">
+      <ul>
+        <li><a href="#tabs-1">{% trans %}Detail{% endtrans %}</a></li>
+        <li><a href="#tabs-2">{% trans %}Picture{% endtrans %}</a></li>
+        <li><a href="#tabs-3">{% trans %}Comment{% endtrans %}</a></li>
+      </ul>
+      <div id="tabs-1">
+          {{ content.body }}
+      </div>
+      <div id="tabs-2">
+          {{ content.field_image }}
+      </div>
+      <div id="tabs-3">
+          {{ content.comment }}
+      </div>
+    </div>
+
   </div>
 </article>
 
